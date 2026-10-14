@@ -86,11 +86,11 @@
     <!-- Main Navigation Tabs -->
     <nav class="max-w-5xl mx-auto w-full px-4 mt-6">
         <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 bg-slate-200/90 p-2 rounded-3xl border-4 border-slate-300 shadow-sm">
-            <button onclick="switchTab('vocab')" id="tab-vocab" class="tab-btn active-tab bg-indigo-600 text-white font-extrabold py-3 px-2 rounded-2xl border-b-4 border-indigo-800 shadow-md flex flex-col items-center justify-center gap-1 transition bouncy">
+            <button onclick="switchTab('vocab')" id="tab-vocab" class="tab-btn bg-slate-100 text-slate-700 hover:bg-slate-200 font-bold py-3 px-2 rounded-2xl border-b-4 border-slate-300 flex flex-col items-center justify-center gap-1 transition bouncy">
                 <i class="fa-solid fa-book-open text-lg"></i>
                 <span class="text-xs sm:text-sm">Vocabulary</span>
             </button>
-            <button onclick="switchTab('sentences')" id="tab-sentences" class="tab-btn bg-slate-100 text-slate-700 hover:bg-slate-200 font-bold py-3 px-2 rounded-2xl border-b-4 border-slate-300 flex flex-col items-center justify-center gap-1 transition bouncy">
+            <button onclick="switchTab('sentences')" id="tab-sentences" class="tab-btn active-tab bg-teal-600 text-white font-extrabold py-3 px-2 rounded-2xl border-b-4 border-teal-800 shadow-md flex flex-col items-center justify-center gap-1 transition bouncy">
                 <i class="fa-solid fa-align-left text-lg"></i>
                 <span class="text-xs sm:text-sm">Sentences</span>
             </button>
@@ -113,7 +113,7 @@
     <main class="max-w-5xl mx-auto w-full px-4 mt-6 flex-1">
 
         <!-- TAB 1: VOCABULARY -->
-        <section id="sec-vocab" class="tab-content space-y-6">
+        <section id="sec-vocab" class="tab-content hidden space-y-6">
             <div class="bg-indigo-50 border-4 border-indigo-200 rounded-3xl p-4 sm:p-6 flex items-center justify-between shadow-sm">
                 <div>
                     <h2 class="text-2xl font-bold text-indigo-900 flex items-center gap-2">
@@ -134,21 +134,18 @@
                 <!-- Card 1: 去上学 -->
                 <div class="bg-rose-50 border-4 border-rose-300 rounded-3xl p-5 flex flex-col items-center justify-between shadow-md hover:shadow-lg transition">
                     <div class="w-full h-36 bg-white rounded-2xl border-2 border-rose-200 overflow-hidden p-2 flex items-center justify-center">
-                        <!-- Custom SVG Illustration: Go to School -->
                         <svg class="w-full h-full" viewBox="0 0 200 150" fill="none">
                             <rect x="50" y="40" width="100" height="80" rx="10" fill="#fecdd3" stroke="#e11d48" stroke-width="4"/>
                             <path d="M40 50 L100 15 L160 50 Z" fill="#fda4af" stroke="#e11d48" stroke-width="4"/>
                             <rect x="85" y="80" width="30" height="40" fill="#be123c" rx="4"/>
                             <circle cx="100" cy="35" r="10" fill="#fef08a" stroke="#ca8a04" stroke-width="3"/>
                             <path d="M100 28 L100 42 M93 35 L107 35" stroke="#ca8a04" stroke-width="2"/>
-                            <!-- Student walking -->
                             <circle cx="30" cy="100" r="12" fill="#fde047"/>
                             <path d="M30 112 L30 135 M22 120 L38 120" stroke="#0284c7" stroke-width="4" stroke-linecap="round"/>
                             <rect x="18" y="110" width="10" height="15" fill="#f43f5e" rx="2"/>
                         </svg>
                     </div>
                     
-                    <!-- Vertical Hanzi & Pinyin Stacking -->
                     <div class="mt-4 flex items-center justify-center gap-3">
                         <div class="flex flex-col items-center">
                             <span class="text-4xl font-extrabold text-slate-800 hanzi-font">去</span>
@@ -164,12 +161,10 @@
                         </div>
                     </div>
 
-                    <!-- English Translation -->
                     <div class="mt-2 text-lg font-extrabold text-rose-900 bg-rose-200/60 px-4 py-1 rounded-xl w-full text-center">
                         Go to school
                     </div>
 
-                    <!-- Audio Trigger Button -->
                     <button onclick="speakMandarin('去上学')" class="mt-4 w-full bg-rose-500 hover:bg-rose-600 text-white font-bold py-2.5 rounded-2xl border-b-4 border-rose-700 flex items-center justify-center gap-2 text-base shadow bouncy">
                         <i class="fa-solid fa-volume-high text-lg"></i> Listen Audio
                     </button>
@@ -178,9 +173,7 @@
                 <!-- Card 2: 放学 -->
                 <div class="bg-amber-50 border-4 border-amber-300 rounded-3xl p-5 flex flex-col items-center justify-between shadow-md hover:shadow-lg transition">
                     <div class="w-full h-36 bg-white rounded-2xl border-2 border-amber-200 overflow-hidden p-2 flex items-center justify-center">
-                        <!-- Custom SVG Illustration: School Dismissal -->
                         <svg class="w-full h-full" viewBox="0 0 200 150" fill="none">
-                            <!-- School Bell & Clock -->
                             <circle cx="100" cy="60" r="35" fill="#fef08a" stroke="#d97706" stroke-width="4"/>
                             <path d="M100 60 L100 40 M100 60 L115 60" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
                             <circle cx="100" cy="60" r="4" fill="#b45309"/>
@@ -213,7 +206,6 @@
                 <!-- Card 3: 回家 -->
                 <div class="bg-emerald-50 border-4 border-emerald-300 rounded-3xl p-5 flex flex-col items-center justify-between shadow-md hover:shadow-lg transition">
                     <div class="w-full h-36 bg-white rounded-2xl border-2 border-emerald-200 overflow-hidden p-2 flex items-center justify-center">
-                        <!-- Custom SVG Illustration: Go Home -->
                         <svg class="w-full h-full" viewBox="0 0 200 150" fill="none">
                             <path d="M40 70 L100 20 L160 70 Z" fill="#4ade80" stroke="#15803d" stroke-width="4"/>
                             <rect x="55" y="70" width="90" height="60" fill="#bbf7d0" stroke="#15803d" stroke-width="4"/>
@@ -246,11 +238,9 @@
                 <!-- Card 4: 来这儿 -->
                 <div class="bg-sky-50 border-4 border-sky-300 rounded-3xl p-5 flex flex-col items-center justify-between shadow-md hover:shadow-lg transition">
                     <div class="w-full h-36 bg-white rounded-2xl border-2 border-sky-200 overflow-hidden p-2 flex items-center justify-center">
-                        <!-- Custom SVG Illustration: Come Here -->
                         <svg class="w-full h-full" viewBox="0 0 200 150" fill="none">
                             <circle cx="60" cy="65" r="22" fill="#38bdf8"/>
                             <path d="M60 87 L60 120 M45 100 L75 100" stroke="#0284c7" stroke-width="5" stroke-linecap="round"/>
-                            <!-- Arrow pointing towards person -->
                             <path d="M160 75 L100 75 M120 55 L100 75 L120 95" stroke="#0284c7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
@@ -282,11 +272,9 @@
                 <!-- Card 5: 去那儿 -->
                 <div class="bg-purple-50 border-4 border-purple-300 rounded-3xl p-5 flex flex-col items-center justify-between shadow-md hover:shadow-lg transition">
                     <div class="w-full h-36 bg-white rounded-2xl border-2 border-purple-200 overflow-hidden p-2 flex items-center justify-center">
-                        <!-- Custom SVG Illustration: Go There -->
                         <svg class="w-full h-full" viewBox="0 0 200 150" fill="none">
                             <circle cx="50" cy="65" r="22" fill="#c084fc"/>
                             <path d="M50 87 L50 120 M35 100 L65 100" stroke="#7e22ce" stroke-width="5" stroke-linecap="round"/>
-                            <!-- Arrow pointing away -->
                             <path d="M90 75 L150 75 M130 55 L150 75 L130 95" stroke="#7e22ce" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
@@ -318,105 +306,385 @@
             </div>
         </section>
 
-        <!-- TAB 2: SENTENCES -->
-        <section id="sec-sentences" class="tab-content hidden space-y-6">
+        <!-- TAB 2: SENTENCES (DIVIDED INTO 3 PARTS) -->
+        <section id="sec-sentences" class="tab-content space-y-8">
             <div class="bg-teal-50 border-4 border-teal-200 rounded-3xl p-4 sm:p-6 flex items-center justify-between shadow-sm">
                 <div>
                     <h2 class="text-2xl font-bold text-teal-900 flex items-center gap-2">
-                        <span>💬</span> Daily Sentences
+                        <span>💬</span> Daily Sentences (实用句子)
                     </h2>
                     <p class="text-teal-700 text-sm font-medium mt-1">
-                        Practice full key sentences with character alignment!
+                        Divided into 3 structured parts. Tap audio to practice each sentence!
                     </p>
                 </div>
             </div>
 
-            <!-- Sentence List -->
-            <div class="space-y-6">
-
-                <!-- Sentence 1: 我去上学 -->
-                <div class="bg-white border-4 border-rose-300 rounded-3xl p-6 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
-                    <div class="flex-1 space-y-4">
-                        <div class="flex flex-wrap items-center gap-3">
-                            <div class="flex flex-col items-center bg-rose-50 px-3 py-2 rounded-2xl border-2 border-rose-200">
-                                <span class="text-4xl font-extrabold text-slate-800 hanzi-font">我</span>
-                                <span class="text-sm font-bold text-rose-600">wǒ</span>
-                            </div>
-                            <div class="flex flex-col items-center bg-rose-50 px-3 py-2 rounded-2xl border-2 border-rose-200">
-                                <span class="text-4xl font-extrabold text-slate-800 hanzi-font">去</span>
-                                <span class="text-sm font-bold text-rose-600">qù</span>
-                            </div>
-                            <div class="flex flex-col items-center bg-rose-50 px-3 py-2 rounded-2xl border-2 border-rose-200">
-                                <span class="text-4xl font-extrabold text-slate-800 hanzi-font">上</span>
-                                <span class="text-sm font-bold text-rose-600">shàng</span>
-                            </div>
-                            <div class="flex flex-col items-center bg-rose-50 px-3 py-2 rounded-2xl border-2 border-rose-200">
-                                <span class="text-4xl font-extrabold text-slate-800 hanzi-font">学</span>
-                                <span class="text-sm font-bold text-rose-600">xué</span>
-                            </div>
-                        </div>
-                        <div class="text-xl font-black text-rose-900 flex items-center gap-2">
-                            <i class="fa-solid fa-globe text-rose-500"></i> I go to school.
-                        </div>
-                    </div>
-                    <button onclick="speakMandarin('我去上学')" class="w-full md:w-auto bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 px-6 rounded-2xl border-b-4 border-rose-700 flex items-center justify-center gap-3 text-lg shadow bouncy">
-                        <i class="fa-solid fa-volume-high text-xl"></i> Listen Sentence
-                    </button>
+            <!-- PART 1 -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-3 bg-rose-500 text-white px-5 py-3 rounded-2xl border-b-4 border-rose-700 shadow-md">
+                    <span class="bg-white text-rose-700 rounded-full w-8 h-8 flex items-center justify-center font-black text-lg">1</span>
+                    <h3 class="text-xl font-extrabold tracking-wide">第一部分：基础日常句型 (Part 1: Basic Daily Routines)</h3>
                 </div>
 
-                <!-- Sentence 2: 我放学 -->
-                <div class="bg-white border-4 border-amber-300 rounded-3xl p-6 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
-                    <div class="flex-1 space-y-4">
-                        <div class="flex flex-wrap items-center gap-3">
-                            <div class="flex flex-col items-center bg-amber-50 px-3 py-2 rounded-2xl border-2 border-amber-200">
-                                <span class="text-4xl font-extrabold text-slate-800 hanzi-font">我</span>
-                                <span class="text-sm font-bold text-amber-600">wǒ</span>
+                <div class="space-y-4">
+                    <!-- Sentence 1.1: 我去上学 -->
+                    <div class="bg-white border-4 border-rose-200 hover:border-rose-300 rounded-3xl p-5 shadow-sm transition flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <div class="flex flex-col items-center bg-rose-50 px-3 py-1.5 rounded-2xl border-2 border-rose-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">我</span>
+                                    <span class="text-xs font-bold text-rose-600">wǒ</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-rose-50 px-3 py-1.5 rounded-2xl border-2 border-rose-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">去</span>
+                                    <span class="text-xs font-bold text-rose-600">qù</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-rose-50 px-3 py-1.5 rounded-2xl border-2 border-rose-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">上</span>
+                                    <span class="text-xs font-bold text-rose-600">shàng</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-rose-50 px-3 py-1.5 rounded-2xl border-2 border-rose-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">学</span>
+                                    <span class="text-xs font-bold text-rose-600">xué</span>
+                                </div>
                             </div>
-                            <div class="flex flex-col items-center bg-amber-50 px-3 py-2 rounded-2xl border-2 border-amber-200">
-                                <span class="text-4xl font-extrabold text-slate-800 hanzi-font">放</span>
-                                <span class="text-sm font-bold text-amber-600">fàng</span>
-                            </div>
-                            <div class="flex flex-col items-center bg-amber-50 px-3 py-2 rounded-2xl border-2 border-amber-200">
-                                <span class="text-4xl font-extrabold text-slate-800 hanzi-font">学</span>
-                                <span class="text-sm font-bold text-amber-600">xué</span>
+                            <div class="text-lg font-bold text-rose-950 flex items-center gap-2">
+                                <i class="fa-solid fa-globe text-rose-500"></i> I go to school.
                             </div>
                         </div>
-                        <div class="text-xl font-black text-amber-900 flex items-center gap-2">
-                            <i class="fa-solid fa-globe text-amber-500"></i> I finish school.
-                        </div>
+                        <button onclick="speakMandarin('我去上学')" class="w-full md:w-auto bg-rose-500 hover:bg-rose-600 text-white font-bold py-2.5 px-5 rounded-2xl border-b-4 border-rose-700 flex items-center justify-center gap-2 text-base shadow bouncy">
+                            <i class="fa-solid fa-volume-high text-lg"></i> Listen
+                        </button>
                     </div>
-                    <button onclick="speakMandarin('我放学')" class="w-full md:w-auto bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-2xl border-b-4 border-amber-700 flex items-center justify-center gap-3 text-lg shadow bouncy">
-                        <i class="fa-solid fa-volume-high text-xl"></i> Listen Sentence
-                    </button>
-                </div>
 
-                <!-- Sentence 3: 我回家 -->
-                <div class="bg-white border-4 border-emerald-300 rounded-3xl p-6 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
-                    <div class="flex-1 space-y-4">
-                        <div class="flex flex-wrap items-center gap-3">
-                            <div class="flex flex-col items-center bg-emerald-50 px-3 py-2 rounded-2xl border-2 border-emerald-200">
-                                <span class="text-4xl font-extrabold text-slate-800 hanzi-font">我</span>
-                                <span class="text-sm font-bold text-emerald-600">wǒ</span>
+                    <!-- Sentence 1.2: 我放学 -->
+                    <div class="bg-white border-4 border-rose-200 hover:border-rose-300 rounded-3xl p-5 shadow-sm transition flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <div class="flex flex-col items-center bg-rose-50 px-3 py-1.5 rounded-2xl border-2 border-rose-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">我</span>
+                                    <span class="text-xs font-bold text-rose-600">wǒ</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-rose-50 px-3 py-1.5 rounded-2xl border-2 border-rose-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">放</span>
+                                    <span class="text-xs font-bold text-rose-600">fàng</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-rose-50 px-3 py-1.5 rounded-2xl border-2 border-rose-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">学</span>
+                                    <span class="text-xs font-bold text-rose-600">xué</span>
+                                </div>
                             </div>
-                            <div class="flex flex-col items-center bg-emerald-50 px-3 py-2 rounded-2xl border-2 border-emerald-200">
-                                <span class="text-4xl font-extrabold text-slate-800 hanzi-font">回</span>
-                                <span class="text-sm font-bold text-emerald-600">huí</span>
-                            </div>
-                            <div class="flex flex-col items-center bg-emerald-50 px-3 py-2 rounded-2xl border-2 border-emerald-200">
-                                <span class="text-4xl font-extrabold text-slate-800 hanzi-font">家</span>
-                                <span class="text-sm font-bold text-emerald-600">jiā</span>
+                            <div class="text-lg font-bold text-rose-950 flex items-center gap-2">
+                                <i class="fa-solid fa-globe text-rose-500"></i> I finish school.
                             </div>
                         </div>
-                        <div class="text-xl font-black text-emerald-900 flex items-center gap-2">
-                            <i class="fa-solid fa-globe text-emerald-500"></i> I go home.
-                        </div>
+                        <button onclick="speakMandarin('我放学')" class="w-full md:w-auto bg-rose-500 hover:bg-rose-600 text-white font-bold py-2.5 px-5 rounded-2xl border-b-4 border-rose-700 flex items-center justify-center gap-2 text-base shadow bouncy">
+                            <i class="fa-solid fa-volume-high text-lg"></i> Listen
+                        </button>
                     </div>
-                    <button onclick="speakMandarin('我回家')" class="w-full md:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-6 rounded-2xl border-b-4 border-emerald-700 flex items-center justify-center gap-3 text-lg shadow bouncy">
-                        <i class="fa-solid fa-volume-high text-xl"></i> Listen Sentence
-                    </button>
-                </div>
 
+                    <!-- Sentence 1.3: 我回家 -->
+                    <div class="bg-white border-4 border-rose-200 hover:border-rose-300 rounded-3xl p-5 shadow-sm transition flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <div class="flex flex-col items-center bg-rose-50 px-3 py-1.5 rounded-2xl border-2 border-rose-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">我</span>
+                                    <span class="text-xs font-bold text-rose-600">wǒ</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-rose-50 px-3 py-1.5 rounded-2xl border-2 border-rose-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">回</span>
+                                    <span class="text-xs font-bold text-rose-600">huí</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-rose-50 px-3 py-1.5 rounded-2xl border-2 border-rose-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">家</span>
+                                    <span class="text-xs font-bold text-rose-600">jiā</span>
+                                </div>
+                            </div>
+                            <div class="text-lg font-bold text-rose-950 flex items-center gap-2">
+                                <i class="fa-solid fa-globe text-rose-500"></i> I go home.
+                            </div>
+                        </div>
+                        <button onclick="speakMandarin('我回家')" class="w-full md:w-auto bg-rose-500 hover:bg-rose-600 text-white font-bold py-2.5 px-5 rounded-2xl border-b-4 border-rose-700 flex items-center justify-center gap-2 text-base shadow bouncy">
+                            <i class="fa-solid fa-volume-high text-lg"></i> Listen
+                        </button>
+                    </div>
+                </div>
             </div>
+
+            <!-- PART 2 -->
+            <div class="space-y-4 pt-2">
+                <div class="flex items-center gap-3 bg-indigo-600 text-white px-5 py-3 rounded-2xl border-b-4 border-indigo-800 shadow-md">
+                    <span class="bg-white text-indigo-800 rounded-full w-8 h-8 flex items-center justify-center font-black text-lg">2</span>
+                    <h3 class="text-xl font-extrabold tracking-wide">第二部分：学习与态度 (Part 2: Learning Attitude)</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Sentence 2.1: 我喜欢学习 -->
+                    <div class="bg-white border-4 border-indigo-200 hover:border-indigo-300 rounded-3xl p-5 shadow-sm transition flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <div class="flex flex-col items-center bg-indigo-50 px-3 py-1.5 rounded-2xl border-2 border-indigo-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">我</span>
+                                    <span class="text-xs font-bold text-indigo-600">wǒ</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-indigo-50 px-3 py-1.5 rounded-2xl border-2 border-indigo-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">喜</span>
+                                    <span class="text-xs font-bold text-indigo-600">xǐ</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-indigo-50 px-3 py-1.5 rounded-2xl border-2 border-indigo-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">欢</span>
+                                    <span class="text-xs font-bold text-indigo-600">huan</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-indigo-50 px-3 py-1.5 rounded-2xl border-2 border-indigo-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">学</span>
+                                    <span class="text-xs font-bold text-indigo-600">xué</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-indigo-50 px-3 py-1.5 rounded-2xl border-2 border-indigo-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">习</span>
+                                    <span class="text-xs font-bold text-indigo-600">xí</span>
+                                </div>
+                            </div>
+                            <div class="text-lg font-bold text-indigo-950 flex items-center gap-2">
+                                <i class="fa-solid fa-globe text-indigo-500"></i> I like to study.
+                            </div>
+                        </div>
+                        <button onclick="speakMandarin('我喜欢学习')" class="w-full md:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-5 rounded-2xl border-b-4 border-indigo-800 flex items-center justify-center gap-2 text-base shadow bouncy">
+                            <i class="fa-solid fa-volume-high text-lg"></i> Listen
+                        </button>
+                    </div>
+
+                    <!-- Sentence 2.2: 我也要学习 -->
+                    <div class="bg-white border-4 border-indigo-200 hover:border-indigo-300 rounded-3xl p-5 shadow-sm transition flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <div class="flex flex-col items-center bg-indigo-50 px-3 py-1.5 rounded-2xl border-2 border-indigo-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">我</span>
+                                    <span class="text-xs font-bold text-indigo-600">wǒ</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-indigo-50 px-3 py-1.5 rounded-2xl border-2 border-indigo-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">也</span>
+                                    <span class="text-xs font-bold text-indigo-600">yě</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-indigo-50 px-3 py-1.5 rounded-2xl border-2 border-indigo-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">要</span>
+                                    <span class="text-xs font-bold text-indigo-600">yào</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-indigo-50 px-3 py-1.5 rounded-2xl border-2 border-indigo-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">学</span>
+                                    <span class="text-xs font-bold text-indigo-600">xué</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-indigo-50 px-3 py-1.5 rounded-2xl border-2 border-indigo-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">习</span>
+                                    <span class="text-xs font-bold text-indigo-600">xí</span>
+                                </div>
+                            </div>
+                            <div class="text-lg font-bold text-indigo-950 flex items-center gap-2">
+                                <i class="fa-solid fa-globe text-indigo-500"></i> I also want to study.
+                            </div>
+                        </div>
+                        <button onclick="speakMandarin('我也要学习')" class="w-full md:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-5 rounded-2xl border-b-4 border-indigo-800 flex items-center justify-center gap-2 text-base shadow bouncy">
+                            <i class="fa-solid fa-volume-high text-lg"></i> Listen
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PART 3 -->
+            <div class="space-y-4 pt-2">
+                <div class="flex items-center gap-3 bg-emerald-600 text-white px-5 py-3 rounded-2xl border-b-4 border-emerald-800 shadow-md">
+                    <span class="bg-white text-emerald-800 rounded-full w-8 h-8 flex items-center justify-center font-black text-lg">3</span>
+                    <h3 class="text-xl font-extrabold tracking-wide">第三部分：一天的时间表 (Part 3: Daily Schedule & Time)</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Sentence 3.1: 我六点起床 -->
+                    <div class="bg-white border-4 border-emerald-200 hover:border-emerald-300 rounded-3xl p-5 shadow-sm transition flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">我</span>
+                                    <span class="text-xs font-bold text-emerald-600">wǒ</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">六</span>
+                                    <span class="text-xs font-bold text-emerald-600">liù</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">点</span>
+                                    <span class="text-xs font-bold text-emerald-600">diǎn</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">起</span>
+                                    <span class="text-xs font-bold text-emerald-600">qǐ</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">床</span>
+                                    <span class="text-xs font-bold text-emerald-600">chuáng</span>
+                                </div>
+                            </div>
+                            <div class="text-lg font-bold text-emerald-950 flex items-center gap-2">
+                                <i class="fa-solid fa-globe text-emerald-500"></i> I get up at 6 o'clock. 🕕 6:00
+                            </div>
+                        </div>
+                        <button onclick="speakMandarin('我六点起床')" class="w-full md:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-5 rounded-2xl border-b-4 border-emerald-800 flex items-center justify-center gap-2 text-base shadow bouncy">
+                            <i class="fa-solid fa-volume-high text-lg"></i> Listen
+                        </button>
+                    </div>
+
+                    <!-- Sentence 3.2: 我七点去上学 -->
+                    <div class="bg-white border-4 border-emerald-200 hover:border-emerald-300 rounded-3xl p-5 shadow-sm transition flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">我</span>
+                                    <span class="text-xs font-bold text-emerald-600">wǒ</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">七</span>
+                                    <span class="text-xs font-bold text-emerald-600">qī</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">点</span>
+                                    <span class="text-xs font-bold text-emerald-600">diǎn</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">去</span>
+                                    <span class="text-xs font-bold text-emerald-600">qù</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">上</span>
+                                    <span class="text-xs font-bold text-emerald-600">shàng</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">学</span>
+                                    <span class="text-xs font-bold text-emerald-600">xué</span>
+                                </div>
+                            </div>
+                            <div class="text-lg font-bold text-emerald-950 flex items-center gap-2">
+                                <i class="fa-solid fa-globe text-emerald-500"></i> I go to school at 7 o'clock. 🕖 7:00
+                            </div>
+                        </div>
+                        <button onclick="speakMandarin('我七点去上学')" class="w-full md:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-5 rounded-2xl border-b-4 border-emerald-800 flex items-center justify-center gap-2 text-base shadow bouncy">
+                            <i class="fa-solid fa-volume-high text-lg"></i> Listen
+                        </button>
+                    </div>
+
+                    <!-- Sentence 3.3: 我九点吃早饭 -->
+                    <div class="bg-white border-4 border-emerald-200 hover:border-emerald-300 rounded-3xl p-5 shadow-sm transition flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">我</span>
+                                    <span class="text-xs font-bold text-emerald-600">wǒ</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">九</span>
+                                    <span class="text-xs font-bold text-emerald-600">jiǔ</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">点</span>
+                                    <span class="text-xs font-bold text-emerald-600">diǎn</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">吃</span>
+                                    <span class="text-xs font-bold text-emerald-600">chī</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">早</span>
+                                    <span class="text-xs font-bold text-emerald-600">zǎo</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">饭</span>
+                                    <span class="text-xs font-bold text-emerald-600">fàn</span>
+                                </div>
+                            </div>
+                            <div class="text-lg font-bold text-emerald-950 flex items-center gap-2">
+                                <i class="fa-solid fa-globe text-emerald-500"></i> I eat breakfast at 9 o'clock. 🕘 9:00
+                            </div>
+                        </div>
+                        <button onclick="speakMandarin('我九点吃早饭')" class="w-full md:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-5 rounded-2xl border-b-4 border-emerald-800 flex items-center justify-center gap-2 text-base shadow bouncy">
+                            <i class="fa-solid fa-volume-high text-lg"></i> Listen
+                        </button>
+                    </div>
+
+                    <!-- Sentence 3.4: 我两点放学回家 -->
+                    <div class="bg-white border-4 border-emerald-200 hover:border-emerald-300 rounded-3xl p-5 shadow-sm transition flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">我</span>
+                                    <span class="text-xs font-bold text-emerald-600">wǒ</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">两</span>
+                                    <span class="text-xs font-bold text-emerald-600">liǎng</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">点</span>
+                                    <span class="text-xs font-bold text-emerald-600">diǎn</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">放</span>
+                                    <span class="text-xs font-bold text-emerald-600">fàng</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">学</span>
+                                    <span class="text-xs font-bold text-emerald-600">xué</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">回</span>
+                                    <span class="text-xs font-bold text-emerald-600">huí</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">家</span>
+                                    <span class="text-xs font-bold text-emerald-600">jiā</span>
+                                </div>
+                            </div>
+                            <div class="text-lg font-bold text-emerald-950 flex items-center gap-2">
+                                <i class="fa-solid fa-globe text-emerald-500"></i> I finish school and go home at 2 o'clock. 🕑 2:00
+                            </div>
+                        </div>
+                        <button onclick="speakMandarin('我两点放学回家')" class="w-full md:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-5 rounded-2xl border-b-4 border-emerald-800 flex items-center justify-center gap-2 text-base shadow bouncy">
+                            <i class="fa-solid fa-volume-high text-lg"></i> Listen
+                        </button>
+                    </div>
+
+                    <!-- Sentence 3.5: 我十点睡觉 -->
+                    <div class="bg-white border-4 border-emerald-200 hover:border-emerald-300 rounded-3xl p-5 shadow-sm transition flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">我</span>
+                                    <span class="text-xs font-bold text-emerald-600">wǒ</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">十</span>
+                                    <span class="text-xs font-bold text-emerald-600">shí</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">点</span>
+                                    <span class="text-xs font-bold text-emerald-600">diǎn</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">睡</span>
+                                    <span class="text-xs font-bold text-emerald-600">shuì</span>
+                                </div>
+                                <div class="flex flex-col items-center bg-emerald-50 px-3 py-1.5 rounded-2xl border-2 border-emerald-200">
+                                    <span class="text-3xl font-extrabold text-slate-800 hanzi-font">觉</span>
+                                    <span class="text-xs font-bold text-emerald-600">jiào</span>
+                                </div>
+                            </div>
+                            <div class="text-lg font-bold text-emerald-950 flex items-center gap-2">
+                                <i class="fa-solid fa-globe text-emerald-500"></i> I go to sleep at 10 o'clock. 🕙 10:00
+                            </div>
+                        </div>
+                        <button onclick="speakMandarin('我十点睡觉')" class="w-full md:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-5 rounded-2xl border-b-4 border-emerald-800 flex items-center justify-center gap-2 text-base shadow bouncy">
+                            <i class="fa-solid fa-volume-high text-lg"></i> Listen
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- TAB 3: DIALOGUE -->
@@ -613,7 +881,7 @@
                 <div id="quiz-progress-bar" class="bg-amber-500 h-full w-[3.33%] transition-all duration-300"></div>
             </div>
 
-            <!-- Quiz Main Card (Not Plain White, Soft Solid Fills) -->
+            <!-- Quiz Main Card -->
             <div id="quiz-card" class="bg-amber-50 border-4 border-amber-300 rounded-3xl p-6 shadow-md space-y-6">
                 
                 <!-- Question Prompt Area -->
@@ -627,20 +895,16 @@
                         What is the meaning of "去上学"?
                     </h3>
 
-                    <!-- Optional SVG Graphic or Audio Prompt -->
                     <div id="quiz-media-container" class="hidden flex justify-center py-2">
-                        <!-- Rendered dynamically -->
                     </div>
                 </div>
 
-                <!-- 4 Options Grid (Vibrant Fills, Solid Colors, No Gradients, Options一二三四) -->
+                <!-- 4 Options Grid -->
                 <div id="quiz-options-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <!-- Options populated by JS -->
                 </div>
 
                 <!-- Feedback & Audio Output Banner -->
                 <div id="quiz-feedback-banner" class="hidden rounded-2xl p-4 text-center font-black text-lg shadow-sm border-4">
-                    <!-- Banner populated on selection -->
                 </div>
 
                 <!-- Next Question Button -->
@@ -651,7 +915,7 @@
                 </div>
             </div>
 
-            <!-- Quiz Final Summary Box (Hidden initially) -->
+            <!-- Quiz Final Summary Box -->
             <div id="quiz-summary-box" class="hidden bg-emerald-50 border-4 border-emerald-300 rounded-3xl p-8 text-center space-y-6 shadow-lg">
                 <div class="text-6xl animate-bounce">🏆</div>
                 <h3 class="text-3xl font-black text-emerald-900">Quiz Completed!</h3>
@@ -675,15 +939,9 @@
     </main>
 
     <script>
-        
-        // Multi-Tier Audio Engine Implementation:
-        // Priority 1: Youdao Mandarin CDN MP3 (dict.youdao.com)
-        // Priority 2: Web Speech API (zh-CN)
-        // Priority 3: Gemini Speech API Fallback
         let isAudioUnlocked = false;
         let audioContext = null;
 
-        // Mobile Touch Unlocker Function
         function unlockAudio() {
             if (!audioContext) {
                 const AudioCtx = window.AudioContext || window.webkitAudioContext;
@@ -695,7 +953,6 @@
                 audioContext.resume();
             }
 
-            // Silent buffer trick to unlock audio autoplay restrictions on mobile Safari & Chrome
             if (audioContext && !isAudioUnlocked) {
                 try {
                     const buffer = audioContext.createBuffer(1, 1, 22050);
@@ -726,15 +983,10 @@
             document.addEventListener(evt, unlockAudio, { once: true });
         });
 
-        /**
-         * Core Multi-Tier Mandarin Speech Function
-         * @param {string} text - Mandarin phrase to pronounce
-         */
         async function speakMandarin(text) {
             if (!text) return;
             unlockAudio();
 
-            // TIER 1: Youdao Mandarin Public Audio CDN MP3
             let tier1Played = false;
             try {
                 const encodedText = encodeURIComponent(text);
@@ -754,10 +1006,9 @@
 
                 if (tier1Played) return;
             } catch (err) {
-                console.warn('Tier 1 (Youdao CDN) audio unavailable, trying Tier 2 (Web Speech API)...', err);
+                console.warn('Tier 1 audio unavailable, trying Web Speech API...', err);
             }
 
-            // TIER 2: Browser Built-in Web Speech API (zh-CN)
             if ('speechSynthesis' in window) {
                 try {
                     window.speechSynthesis.cancel();
@@ -775,104 +1026,14 @@
                         utterance.onend = () => { speechCompleted = true; resolve(); };
                         utterance.onerror = () => resolve();
                         window.speechSynthesis.speak(utterance);
-                        setTimeout(() => resolve(), 2200); // Guard timeout
+                        setTimeout(() => resolve(), 2200);
                     });
 
                     if (speechCompleted) return;
                 } catch (e) {
-                    console.warn('Tier 2 (Web Speech API) failed, trying Tier 3 Gemini Speech API...', e);
+                    console.warn('Web Speech API failed', e);
                 }
             }
-
-            // TIER 3: Gemini Speech Generation API
-            await speakViaGeminiTTS(text);
-        }
-
-        /**
-         * Tier 3 Fallback: Gemini Speech API
-         */
-        async function speakViaGeminiTTS(text) {
-            try {
-                const apiKey = "";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
-
-                const payload = {
-                    contents: [{ parts: [{ text: `Say clearly in standard Mandarin: ${text}` }] }],
-                    generationConfig: {
-                        responseModalities: ["AUDIO"],
-                        speechConfig: {
-                            voiceConfig: {
-                                prebuiltVoiceConfig: { voiceName: "Kore" }
-                            }
-                        }
-                    },
-                    model: "gemini-2.5-flash-preview-tts"
-                };
-
-                const res = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                const data = await res.json();
-                const part = data?.candidates?.[0]?.content?.parts?.[0];
-                const audioData = part?.inlineData?.data;
-                const mimeType = part?.inlineData?.mimeType;
-
-                if (audioData && mimeType) {
-                    const sampleRate = parseInt(mimeType.match(/rate=(\d+)/)?.[1] || "24000", 10);
-                    const pcmData = base64ToArrayBuffer(audioData);
-                    const pcm16 = new Int16Array(pcmData);
-                    const wavBlob = pcmToWav(pcm16, sampleRate);
-                    const audioUrl = URL.createObjectURL(wavBlob);
-                    const audio = new Audio(audioUrl);
-                    audio.play();
-                }
-            } catch (error) {
-                console.error("Gemini TTS API failed:", error);
-            }
-        }
-
-        function base64ToArrayBuffer(base64) {
-            const binaryString = atob(base64);
-            const bytes = new Uint8Array(binaryString.length);
-            for (let i = 0; i < binaryString.length; i++) {
-                bytes[i] = binaryString.charCodeAt(i);
-            }
-            return bytes.buffer;
-        }
-
-        function pcmToWav(pcm16, sampleRate) {
-            const buffer = new ArrayBuffer(44 + pcm16.length * 2);
-            const view = new DataView(buffer);
-            
-            function writeString(offset, string) {
-                for (let i = 0; i < string.length; i++) {
-                    view.setUint8(offset + i, string.charCodeAt(i));
-                }
-            }
-
-            writeString(0, 'RIFF');
-            view.setUint32(4, 36 + pcm16.length * 2, true);
-            writeString(8, 'WAVE');
-            writeString(12, 'fmt ');
-            view.setUint32(16, 16, true);
-            view.setUint16(20, 1, true);
-            view.setUint16(22, 1, true);
-            view.setUint32(24, sampleRate, true);
-            view.setUint32(28, sampleRate * 2, true);
-            view.setUint16(32, 2, true);
-            view.setUint16(34, 16, true);
-            writeString(36, 'data');
-            view.setUint32(40, pcm16.length * 2, true);
-
-            let offset = 44;
-            for (let i = 0; i < pcm16.length; i++, offset += 2) {
-                view.setInt16(offset, pcm16[i], true);
-            }
-
-            return new Blob([buffer], { type: 'audio/wav' });
         }
 
         function switchTab(tabId) {
@@ -908,10 +1069,10 @@
 
         const builderLevels = [
             { english: "I go to school at 7 o'clock.", target: ["我", "七点", "去", "上学"], distractor: ["回家", "两点"] },
-            { english: "I go home at 2 o'clock.", target: ["我", "两点", "回家"], distractor: ["去那儿", "七点", "放学"] },
-            { english: "I finish school.", target: ["我", "放学"], distractor: ["来这儿", "七点", "回家"] },
-            { english: "Come here!", target: ["来", "这儿"], distractor: ["去", "那儿"] },
-            { english: "Go there!", target: ["去", "那儿"], distractor: ["来", "这儿"] }
+            { english: "I finish school and go home at 2 o'clock.", target: ["我", "两点", "放学", "回家"], distractor: ["去那儿", "七点"] },
+            { english: "I like to study.", target: ["我", "喜欢", "学习"], distractor: ["来这儿", "七点"] },
+            { english: "I get up at 6 o'clock.", target: ["我", "六点", "起床"], distractor: ["睡觉", "去"] },
+            { english: "I go to sleep at 10 o'clock.", target: ["我", "十点", "睡觉"], distractor: ["起床", "吃早饭"] }
         ];
 
         let currentBuilderLevel = 0;
@@ -925,7 +1086,6 @@
             document.getElementById('btn-next-builder').classList.add('hidden');
             selectedBuilderTiles = [];
 
-            // Combine target & distractors and shuffle
             const allWords = [...level.target, ...level.distractor].sort(() => Math.random() - 0.5);
             const poolEl = document.getElementById('builder-pool');
             poolEl.innerHTML = '';
@@ -1011,46 +1171,40 @@
         }
 
         const quizQuestions = [
-            // Questions 1-5: Hanzi to Pinyin
             { q: "What is the Pinyin for: 去上学 ?", options: ["qù shàng xué", "fàng xué", "huí jiā", "lái zhè er"], answer: 0, cat: "Hanzi -> Pinyin" },
-            { q: "What is the Pinyin for: 放学 ?", options: ["qù nà er", "fàng xué", "huí jiā", "qù shàng xué"], answer: 1, cat: "Hanzi -> Pinyin" },
+            { q: "What is the Pinyin for: 我喜欢学习 ?", options: ["wǒ xǐ huan xué xí", "wǒ yě yào xué xí", "wǒ huí jiā", "wǒ shí diǎn shuì jiào"], answer: 0, cat: "Hanzi -> Pinyin" },
             { q: "What is the Pinyin for: 回家 ?", options: ["lái zhè er", "fàng xué", "huí jiā", "qù shàng xué"], answer: 2, cat: "Hanzi -> Pinyin" },
-            { q: "What is the Pinyin for: 来这儿 ?", options: ["lái zhè er", "qù nà er", "fàng xué", "huí jiā"], answer: 0, cat: "Hanzi -> Pinyin" },
-            { q: "What is the Pinyin for: 去那儿 ?", options: ["qù shàng xué", "qù nà er", "fàng xué", "lái zhè er"], answer: 1, cat: "Hanzi -> Pinyin" },
+            { q: "What is the Pinyin for: 我六点起床 ?", options: ["wǒ liù diǎn qǐ chuáng", "wǒ qī diǎn qù shàng xué", "wǒ jiǔ diǎn chī zǎo fàn", "wǒ shí diǎn shuì jiào"], answer: 0, cat: "Hanzi -> Pinyin" },
+            { q: "What is the Pinyin for: 我十点睡觉 ?", options: ["wǒ liù diǎn qǐ chuáng", "wǒ shí diǎn shuì jiào", "wǒ fàng xué", "lái zhè er"], answer: 1, cat: "Hanzi -> Pinyin" },
 
-            // Questions 6-10: English to Hanzi
             { q: "Choose the Hanzi for: 'Go to school'", options: ["放学", "回家", "去上学", "来这儿"], answer: 2, cat: "English -> Hanzi" },
-            { q: "Choose the Hanzi for: 'Finish school'", options: ["放学", "去那儿", "回家", "去上学"], answer: 0, cat: "English -> Hanzi" },
-            { q: "Choose the Hanzi for: 'Go home'", options: ["去上学", "回家", "来这儿", "放学"], answer: 1, cat: "English -> Hanzi" },
-            { q: "Choose the Hanzi for: 'Come here'", options: ["去那儿", "回家", "来这儿", "放学"], answer: 2, cat: "English -> Hanzi" },
-            { q: "Choose the Hanzi for: 'Go there'", options: ["去那儿", "来这儿", "回家", "去上学"], answer: 0, cat: "English -> Hanzi" },
+            { q: "Choose the Hanzi for: 'I like to study'", options: ["我喜欢学习", "我也要学习", "我回家", "我六点起床"], answer: 0, cat: "English -> Hanzi" },
+            { q: "Choose the Hanzi for: 'I get up at 6 o'clock'", options: ["我七点去上学", "我六点起床", "我九点吃早饭", "我十点睡觉"], answer: 1, cat: "English -> Hanzi" },
+            { q: "Choose the Hanzi for: 'I eat breakfast at 9 o'clock'", options: ["我九点吃早饭", "我两点放学回家", "我十点睡觉", "放学"], answer: 0, cat: "English -> Hanzi" },
+            { q: "Choose the Hanzi for: 'I go to sleep at 10 o'clock'", options: ["我十点睡觉", "我六点起床", "我也要学习", "去上学"], answer: 0, cat: "English -> Hanzi" },
 
-            // Questions 11-15: Pinyin to English
             { q: "What does 'huí jiā' mean in English?", options: ["Finish school", "Go home", "Go to school", "Come here"], answer: 1, cat: "Pinyin -> English" },
-            { q: "What does 'fàng xué' mean in English?", options: ["Finish school", "Go home", "Go there", "Come here"], answer: 0, cat: "Pinyin -> English" },
+            { q: "What does 'wǒ yě yào xué xí' mean?", options: ["I also want to study", "I like studying", "I go home", "I get up"], answer: 0, cat: "Pinyin -> English" },
             { q: "What does 'qù shàng xué' mean in English?", options: ["Go home", "Go to school", "Finish school", "Go there"], answer: 1, cat: "Pinyin -> English" },
-            { q: "What does 'lái zhè er' mean in English?", options: ["Go there", "Go home", "Come here", "Finish school"], answer: 2, cat: "Pinyin -> English" },
-            { q: "What does 'qù nà er' mean in English?", options: ["Go there", "Come here", "Go to school", "Go home"], answer: 0, cat: "Pinyin -> English" },
+            { q: "What does 'chī zǎo fàn' mean?", options: ["Eat breakfast", "Go to sleep", "Get up", "Finish school"], answer: 0, cat: "Pinyin -> English" },
+            { q: "What does 'shuì jiào' mean?", options: ["Go to sleep", "Come here", "Go to school", "Go home"], answer: 0, cat: "Pinyin -> English" },
 
-            // Questions 16-20: Sentences & Meaning
             { q: "What is the English meaning of: '我七点去上学。' ?", options: ["I go home at 7 o'clock.", "I go to school at 7 o'clock.", "I finish school at 2 o'clock.", "I come here at 7 o'clock."], answer: 1, cat: "Sentence Meaning" },
-            { q: "What is the English meaning of: '我两点回家。' ?", options: ["I go home at 2 o'clock.", "I go to school at 2 o'clock.", "I finish school at 7 o'clock.", "I go there at 2 o'clock."], answer: 0, cat: "Sentence Meaning" },
+            { q: "What is the English meaning of: '我两点放学回家。' ?", options: ["I finish school and go home at 2 o'clock.", "I go to school at 2 o'clock.", "I finish school at 7 o'clock.", "I go there at 2 o'clock."], answer: 0, cat: "Sentence Meaning" },
             { q: "What is the English meaning of: '我放学。' ?", options: ["I go home.", "I finish school.", "I go to school.", "I come here."], answer: 1, cat: "Sentence Meaning" },
             { q: "Complete the sentence: '你几点去___？' (What time do you go to school?)", options: ["回家", "上学", "这儿", "那儿"], answer: 1, cat: "Sentence Completion" },
-            { q: "Complete the sentence: '你几点___家？' (What time do you go home?)", options: ["回", "去", "放", "来"], answer: 0, cat: "Sentence Completion" },
+            { q: "Complete the sentence: '我___点吃早饭。' (I eat breakfast at 9 o'clock)", options: ["六", "七", "九", "十"], answer: 2, cat: "Sentence Completion" },
 
-            // Questions 21-25: Translations
             { q: "Translate to Mandarin: 'I go to school at 7 o'clock.'", options: ["我七点去上学", "我两点回家", "我七点回家", "我放学"], answer: 0, cat: "Translation" },
-            { q: "Translate to Mandarin: 'I go home at 2 o'clock.'", options: ["我七点去上学", "我两点回家", "我两点去上学", "我放学"], answer: 1, cat: "Translation" },
+            { q: "Translate to Mandarin: 'I get up at 6 o'clock.'", options: ["我六点起床", "我七点去上学", "我九点吃早饭", "我十点睡觉"], answer: 0, cat: "Translation" },
             { q: "What time is '七点' (qī diǎn)?", options: ["2 o'clock", "7 o'clock", "12 o'clock", "5 o'clock"], answer: 1, cat: "Time Recognition" },
-            { q: "What time is '两点' (liǎng diǎn)?", options: ["2 o'clock", "7 o'clock", "10 o'clock", "3 o'clock"], answer: 0, cat: "Time Recognition" },
-            { q: "Which character means 'Come'?", options: ["去 (qù)", "回 (huí)", "来 (lái)", "放 (fàng)"], answer: 2, cat: "Character Focus" },
+            { q: "What time is '六点' (liù diǎn)?", options: ["6 o'clock", "7 o'clock", "9 o'clock", "10 o'clock"], answer: 0, cat: "Time Recognition" },
+            { q: "Which character means 'Learn / Study'?", options: ["学 (xué)", "回 (huí)", "来 (lái)", "放 (fàng)"], answer: 0, cat: "Character Focus" },
 
-            // Questions 26-30: Actions & Directions
-            { q: "Which character means 'Go'?", options: ["去 (qù)", "来 (lái)", "学 (xué)", "家 (jiā)"], answer: 0, cat: "Character Focus" },
-            { q: "Which word means 'Here'?", options: ["那儿 (nà er)", "这儿 (zhè er)", "上学 (shàng xué)", "回家 (huí jiā)"], answer: 1, cat: "Direction Word" },
-            { q: "Which word means 'There'?", options: ["这儿 (zhè er)", "那儿 (nà er)", "放学 (fàng xué)", "去 (qù)"], answer: 1, cat: "Direction Word" },
-            { q: "Fill in the blank: '我七点___上学。' (I go to school at 7)", options: ["回", "放", "去", "来"], answer: 2, cat: "Sentence Completion" },
+            { q: "Which word means 'Breakfast'?", options: ["早饭 (zǎo fàn)", "起床 (qǐ chuáng)", "睡觉 (shuì jiào)", "学习 (xué xí)"], answer: 0, cat: "Vocabulary Focus" },
+            { q: "Which word means 'Sleep'?", options: ["睡觉 (shuì jiào)", "起床 (qǐ chuáng)", "早饭 (zǎo fàn)", "放学 (fàng xué)"], answer: 0, cat: "Vocabulary Focus" },
+            { q: "Which word means 'Get up'?", options: ["起床 (qǐ chuáng)", "睡觉 (shuì jiào)", "上学 (shàng xué)", "回家 (huí jiā)"], answer: 0, cat: "Vocabulary Focus" },
+            { q: "Fill in the blank: '我十点___。' (I go to sleep at 10)", options: ["睡觉", "起床", "吃早饭", "上学"], answer: 0, cat: "Sentence Completion" },
             { q: "What is the full dialogue response to '你几点回家？'", options: ["我两点回家", "我七点去上学", "我放学", "去那儿"], answer: 0, cat: "Dialogue Context" }
         ];
 
@@ -1058,10 +1212,8 @@
         let globalScore = 0;
         let quizAnswered = false;
 
-        // Chinese Option Numbers: 一, 二, 三, 四
         const cnNumbers = ["一", "二", "三", "四"];
 
-        // Bright non-white fill button color classes
         const optionColorClasses = [
             "bg-yellow-100 hover:bg-yellow-200 border-4 border-yellow-400 text-yellow-950",
             "bg-sky-100 hover:bg-sky-200 border-4 border-sky-400 text-sky-950",
@@ -1073,18 +1225,15 @@
             quizAnswered = false;
             const qData = quizQuestions[currentQuizIndex];
 
-            // Progress Update
             document.getElementById('quiz-current-num').innerText = currentQuizIndex + 1;
             const progressPercent = ((currentQuizIndex + 1) / 30) * 100;
             document.getElementById('quiz-progress-bar').style.width = `${progressPercent}%`;
 
-            // Reset Elements
             document.getElementById('quiz-category-tag').innerText = qData.cat;
             document.getElementById('quiz-question-text').innerText = qData.q;
             document.getElementById('quiz-feedback-banner').className = "hidden rounded-2xl p-4 text-center font-black text-lg shadow-sm border-4";
             document.getElementById('btn-quiz-next').classList.add('hidden');
 
-            // Render Options
             const gridEl = document.getElementById('quiz-options-grid');
             gridEl.innerHTML = '';
 
@@ -1093,7 +1242,6 @@
                 btn.id = `quiz-opt-${optIdx}`;
                 btn.className = `${optionColorClasses[optIdx % 4]} rounded-2xl p-4 text-left font-extrabold text-xl shadow-sm transition bouncy flex items-center gap-3`;
                 
-                // Content with Chinese Number Prefix
                 btn.innerHTML = `
                     <span class="w-10 h-10 rounded-xl bg-white/80 border-2 border-slate-300 flex items-center justify-center shrink-0 font-black text-slate-800 text-lg">
                         ${cnNumbers[optIdx]}
@@ -1116,31 +1264,23 @@
             const correctBtn = document.getElementById(`quiz-opt-${qData.answer}`);
 
             if (selectedIndex === qData.answer) {
-                // Correct Answer Logic
                 globalScore += 10;
                 document.getElementById('global-score').innerText = globalScore;
 
-                // Highlight Selected Option Green
                 selectedBtn.className = "bg-emerald-500 border-4 border-emerald-700 text-white rounded-2xl p-4 text-left font-extrabold text-xl shadow-md flex items-center gap-3";
                 
-                // Feedback Banner
                 feedbackBanner.className = "bg-emerald-100 border-4 border-emerald-500 text-emerald-950 rounded-2xl p-4 text-center font-black text-lg shadow-sm";
                 feedbackBanner.innerHTML = `
                     <div class="text-xl">✅ 正确 (zhèngquè) - Correct! (+10 pts)</div>
                 `;
                 feedbackBanner.classList.remove('hidden');
 
-                // Audio Output
                 speakMandarin("正确");
             } else {
-                // Wrong Answer Logic
-                // Highlight Selected Option RED
                 selectedBtn.className = "bg-rose-500 border-4 border-rose-700 text-white rounded-2xl p-4 text-left font-extrabold text-xl shadow-md flex items-center gap-3";
                 
-                // Highlight Correct Option GREEN
                 correctBtn.className = "bg-emerald-500 border-4 border-emerald-700 text-white rounded-2xl p-4 text-left font-extrabold text-xl shadow-md flex items-center gap-3 animate-pulse";
 
-                // Feedback Banner
                 feedbackBanner.className = "bg-rose-100 border-4 border-rose-500 text-rose-950 rounded-2xl p-4 text-center font-black text-lg shadow-sm";
                 feedbackBanner.innerHTML = `
                     <div class="text-xl">❌ 错误 (cuòwù) - Wrong!</div>
@@ -1150,7 +1290,6 @@
                 `;
                 feedbackBanner.classList.remove('hidden');
 
-                // Audio Output
                 speakMandarin("错误");
             }
 
@@ -1162,7 +1301,6 @@
                 currentQuizIndex++;
                 renderQuizQuestion();
             } else {
-                // Quiz Complete
                 document.getElementById('quiz-card').classList.add('hidden');
                 const summaryBox = document.getElementById('quiz-summary-box');
                 summaryBox.classList.remove('hidden');
